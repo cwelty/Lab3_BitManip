@@ -27,18 +27,82 @@ echo ======================================================\n
 echo Running all tests..."\n\n
 
 # Example test:
-test "PINA: 0x00, PINB: 0x00 => PORTC: 0"
+#test "PINA: 0x00, PINB: 0x01 => PORTC: 0x00"
 # Set inputs
-setPINA 0x00
-setPINB 0x00
+#setPINA 0x00
+#setPINB 0x00
 # Continue for several ticks
-continue 2
+#continue 2
 # Set expect values
-expectPORTC 0
+#expectPORTC 0
 # Check pass/fail
-checkResult
+#checkResult
 
 # Add tests below
+
+test “A=0, B=0 -> C=0”
+setPINA 0x00
+setPINB 0x00
+continue 2
+expectPORTC 0x00
+checkResult
+
+test “A=0, B=1 -> C=1”
+setPINA 0x00
+setPINB 0x01
+continue 2
+expectPORTC 0x01
+checkResult
+
+test “A=1, B=1 -> C=2”
+setPINA 0x01
+setPINB 0x01
+continue 2
+expectPORTC 0x02
+checkResult
+
+test “A=1, B=2 -> C=3”
+setPINA 0x01
+setPINB 0x03
+continue 2
+expectPORTC 0x03
+checkResult
+
+test “A=1, B=3 -> C=4”
+setPINA 0x01
+setPINB 0x07
+continue 2
+expectPORTC 0x04
+checkResult
+
+test “A=3, B=2 -> C=5”
+setPINA 0x07
+setPINB 0x30
+continue 2
+expectPORTC 0x05
+checkResult
+
+test “A=2, B=4 -> C=6”
+setPINA 0x0C
+setPINB 0x33
+continue 2
+expectPORTC 0x04
+checkResult
+
+test “A=5, B=2 -> C=7”
+setPINA 0xF1
+setPINB 0x20
+continue 2
+expectPORTC 0x07
+checkResult
+
+test “A=0, B=8 -> C=8”
+setPINA 0x00
+setPINB 0xFF
+continue 2
+expectPORTC 0x08
+checkResult
+
 
 # Report on how many tests passed/tests ran
 set $passed=$tests-$failed
