@@ -1,0 +1,7 @@
+Breakpoint 1 at 0x100: file source/main.c, line 28.
+Note: automatically using hardware breakpoints for read-only addresses.
+======================================================
+Running all tests..."
+
+“A=0,...“A=0,...“A=1,...“A=1,...“A=1,...“A=3,...“A=2,...“A=5,...“A=0,...======================================================
+Quitting: Remote doesn't know how to detach
