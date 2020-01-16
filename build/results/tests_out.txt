@@ -3,5 +3,5 @@ Note: automatically using hardware breakpoints for read-only addresses.
 ======================================================
 Running all tests..."
 
-“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...======================================================
+“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fuel...“Fasten...======================================================
 Quitting: Remote doesn't know how to detach
